@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>Matchyland · High Scores</title>
+    <link rel="icon" href="Matchyland_Logo.png">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="app">
+        <!-- Navigation -->
+        <nav class="nav">
+            <div class="nav-container">
+                <a href="index.html" class="logo">
+                    <img src="Matchyland_Logo.png" alt="Matchyland Logo" class="logo-img">
+                    <span class="logo-text">matchy<span class="highlight">land</span></span>
+                </a>
+                <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Menu">☰</button>
+                <div class="nav-links" id="navLinks">
+                    <a href="index.html" class="nav-link">Home</a>
+                    <a href="game.html" class="nav-link">Game</a>
+                    <a href="howto.html" class="nav-link">How to Play</a>
+                    <a href="scores.html" class="nav-link active">Scores</a>
+                    <a href="stats.html" class="nav-link">Statistics</a>
+                    <a href="about.html" class="nav-link">About</a>
+                    <a href="settings.html" class="nav-link">Settings</a>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Scores Content -->
+        <main class="main">
+            <div class="page-header">
+                <h1 class="page-title">Leaderboard</h1>
+                <p class="page-subtitle">Top players by difficulty</p>
+            </div>
+
+            <div class="scores-tabs">
+                <button class="tab-btn active" onclick="showDifficulty('easy')">Easy</button>
+                <button class="tab-btn" onclick="showDifficulty('medium')">Medium</button>
+                <button class="tab-btn" onclick="showDifficulty('hard')">Hard</button>
+            </div>
+
+            <div class="leaderboard" id="leaderboard">
+                <!-- Scores will be populated by JavaScript -->
+            </div>
+
+            <div class="leaderboard-footer">
+                <button class="btn btn-secondary" onclick="clearAllScores()">Clear All Scores</button>
+            </div>
+        </main>
+    </div>
+
+    <script src="scores.js"></script>
+    <script src="shared.js"></script>
+</body>
+</html>

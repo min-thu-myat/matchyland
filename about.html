@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>Matchyland · About</title>
+    <link rel="icon" href="Matchyland_Logo.png">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="app">
+        <!-- Navigation -->
+        <nav class="nav">
+            <div class="nav-container">
+                <a href="index.html" class="logo">
+                    <img src="Matchyland_Logo.png" alt="Matchyland Logo" class="logo-img">
+                    <span class="logo-text">matchy<span class="highlight">land</span></span>
+                </a>
+                <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Menu">☰</button>
+                <div class="nav-links" id="navLinks">
+                    <a href="index.html" class="nav-link">Home</a>
+                    <a href="game.html" class="nav-link">Game</a>
+                    <a href="howto.html" class="nav-link">How to Play</a>
+                    <a href="scores.html" class="nav-link">Scores</a>
+                    <a href="stats.html" class="nav-link">Statistics</a>
+                    <a href="about.html" class="nav-link active">About</a>
+                    <a href="settings.html" class="nav-link">Settings</a>
+                </div>
+            </div>
+        </nav>
+
+        <!-- About Content -->
+        <main class="main">
+            <div class="about-grid">
+                <div class="about-content">
+                    <span class="badge">✨ Our Story</span>
+                    <h1 class="about-title">Making memory training fun</h1>
+                    <p class="about-text">
+                        Matchyland was created to combine cognitive training with 
+                        delightful design. We believe that improving your memory 
+                        should feel like play, not work.
+                    </p>
+                    
+                    <div class="stats-mini-grid">
+                        <div class="mini-stat">
+                            <span class="mini-stat-value" id="gamesPlayed">0</span>
+                            <span class="mini-stat-label">Games played</span>
+                        </div>
+                        <div class="mini-stat">
+                            <span class="mini-stat-value">3</span>
+                            <span class="mini-stat-label">Difficulty levels</span>
+                        </div>
+                        <div class="mini-stat">
+                            <span class="mini-stat-value">4</span>
+                            <span class="mini-stat-label">Card designs</span>
+                        </div>
+                    </div>
+
+                    <h2 class="about-subtitle">Why play Matchyland?</h2>
+                    <ul class="about-list">
+                        <li class="about-list-item">🧠 Improves short-term memory</li>
+                        <li class="about-list-item">🎯 Enhances concentration</li>
+                        <li class="about-list-item">🏆 Track your progress</li>
+                        <li class="about-list-item">✨ Clean, distraction-free design</li>
+                    </ul>
+                </div>
+
+                <div class="about-illustration">
+                    <div class="illustration-card">
+                        <div class="illustration-icon">🎮</div>
+                        <h3>Version 2.0</h3>
+                        <p>Released 2026</p>
+                    </div>
+                    <div class="illustration-card">
+                        <div class="illustration-icon">🎨</div>
+                        <h3>Designed with</h3>
+                        <p>♥ and attention</p>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="shared.js"></script>
+    <script>
+        // Count total games played from localStorage
+        function updateGameStats() {
+            const scores = localStorage.getItem('matchylandScores');
+            if (scores) {
+                const allScores = JSON.parse(scores);
+                let totalGames = 0;
+                totalGames += allScores.easy?.length || 0;
+                totalGames += allScores.medium?.length || 0;
+                totalGames += allScores.hard?.length || 0;
+                
+                const gamesPlayedSpan = document.getElementById('gamesPlayed');
+                if (gamesPlayedSpan) {
+                    gamesPlayedSpan.textContent = totalGames;
+                }
+            }
+        }
+        updateGameStats();
+    </script>
+
+
+</body>
+</html>

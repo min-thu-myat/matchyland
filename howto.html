@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <link rel="icon" href="Matchyland_Logo.png">
+    <title>Matchyland · How to Play</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="app">
+        <!-- Navigation -->
+        <nav class="nav">
+            <div class="nav-container">
+                <a href="index.html" class="logo">
+                    <img src="Matchyland_Logo.png" alt="Matchyland Logo" class="logo-img">
+                    <span class="logo-text">matchy<span class="highlight">land</span></span>
+                </a>
+                <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Menu">☰</button>
+                <div class="nav-links" id="navLinks">
+                    <a href="index.html" class="nav-link">Home</a>
+                    <a href="game.html" class="nav-link">Game</a>
+                    <a href="howto.html" class="nav-link active">How to Play</a>
+                    <a href="scores.html" class="nav-link">Scores</a>
+                    <a href="stats.html" class="nav-link">Statistics</a>
+                    <a href="about.html" class="nav-link">About</a>
+                    <a href="settings.html" class="nav-link">Settings</a>
+                </div>
+            </div>
+        </nav>
+
+        <!-- How To Content -->
+        <main class="main">
+            <div class="page-header">
+                <h1 class="page-title">How to Play</h1>
+                <p class="page-subtitle">Learn the game in 3 simple steps</p>
+            </div>
+
+            <div class="steps-grid">
+                <div class="step-card">
+                    <div class="step-number">1</div>
+                    <h3 class="step-title">Choose difficulty</h3>
+                    <p class="step-description">
+                        Start with Easy (4x3 grid) and work your way up to Hard (4x6 grid)
+                    </p>
+                    <div class="step-example">
+                        <span class="badge badge-easy">Easy · 6 pairs</span>
+                        <span class="badge badge-medium">Medium · 8 pairs</span>
+                        <span class="badge badge-hard">Hard · 12 pairs</span>
+                    </div>
+                </div>
+
+                <div class="step-card">
+                    <div class="step-number">2</div>
+                    <h3 class="step-title">Find matching pairs</h3>
+                    <p class="step-description">
+                        Click cards to flip them. Remember the positions and match all pairs
+                    </p>
+                    <div class="step-preview">
+                        <span class="preview-icon">🐶</span>
+                        <span class="preview-icon">😎</span>
+                        <span class="preview-icon">🐶</span>
+                        <span class="preview-icon">😎</span>
+                    </div>
+                </div>
+
+                <div class="step-card">
+                    <div class="step-number">3</div>
+                    <h3 class="step-title">Beat your record</h3>
+                    <p class="step-description">
+                        Complete the game with fewer moves to climb the leaderboard
+                    </p>
+                    <div class="stats-mini">
+                        <div>🎯 Fewer moves = higher rank</div>
+                        <div>⏱️ Beat the clock</div>
+                        <div>🏆 Top 5 scores saved</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tip-container">
+                <h3 class="tip-title">💡 Pro Tip</h3>
+                <p class="tip-text">
+                    Try to remember not just the icon, but its position on the grid. 
+                    Start from corners and work your way in!
+                </p>
+            </div>
+
+            <div class="cta-container">
+                <a href="game.html" class="btn btn-primary">I'm ready to play</a>
+            </div>
+        </main>
+    </div>
+
+    <script src="shared.js"></script>
+</body>
+</html>

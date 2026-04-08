@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>Matchyland · Statistics</title>
+    <link rel="icon" href="Matchyland_Logo.png">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="app">
+        <nav class="nav">
+            <div class="nav-container">
+                <a href="index.html" class="logo">
+                    <img src="Matchyland_Logo.png" alt="Matchyland Logo" class="logo-img">
+                    <span class="logo-text">matchy<span class="highlight">land</span></span>
+                </a>
+                <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Menu">☰</button>
+                <div class="nav-links" id="navLinks">
+                    <a href="index.html" class="nav-link">Home</a>
+                    <a href="game.html" class="nav-link">Game</a>
+                    <a href="howto.html" class="nav-link">How to Play</a>
+                    <a href="scores.html" class="nav-link">Scores</a>
+                    <a href="stats.html" class="nav-link active">Statistics</a>
+                    <a href="about.html" class="nav-link">About</a>
+                    <a href="settings.html" class="nav-link">Settings</a>
+                </div>
+            </div>
+        </nav>
+
+        <main class="main">
+            <div class="page-header">
+                <h1 class="page-title">📊 Your Statistics</h1>
+                <p class="page-subtitle">Track your memory mastery progress</p>
+            </div>
+
+            <div class="stats-summary-grid">
+                <div class="summary-card">
+                    <div class="summary-icon">🎮</div>
+                    <div class="summary-info">
+                        <span class="summary-value" id="totalGames">0</span>
+                        <span class="summary-label">Total Games</span>
+                    </div>
+                </div>
+                <div class="summary-card">
+                    <div class="summary-icon">🏆</div>
+                    <div class="summary-info">
+                        <span class="summary-value" id="winRate">0%</span>
+                        <span class="summary-label">Win Rate</span>
+                    </div>
+                </div>
+                <div class="summary-card">
+                    <div class="summary-icon">⭐</div>
+                    <div class="summary-info">
+                        <span class="summary-value" id="bestStreak">0</span>
+                        <span class="summary-label">Best Streak</span>
+                    </div>
+                </div>
+                <div class="summary-card">
+                    <div class="summary-icon">🎯</div>
+                    <div class="summary-info">
+                        <span class="summary-value" id="totalMoves">0</span>
+                        <span class="summary-label">Total Moves</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="stats-tabs">
+                <button class="stats-tab-btn active" data-difficulty="all">All Difficulties</button>
+                <button class="stats-tab-btn" data-difficulty="easy">Easy</button>
+                <button class="stats-tab-btn" data-difficulty="medium">Medium</button>
+                <button class="stats-tab-btn" data-difficulty="hard">Hard</button>
+            </div>
+
+            <div class="charts-container">
+                <div class="chart-card">
+                    <h3 class="chart-title">📈 Performance Over Time</h3>
+                    <div class="chart-wrapper">
+                        <canvas id="performanceChart"></canvas>
+                    </div>
+                    <p class="chart-note">Lower moves = Better performance</p>
+                </div>
+                <div class="chart-card">
+                    <h3 class="chart-title">⚡ Moves Distribution</h3>
+                    <div class="chart-wrapper">
+                        <canvas id="distributionChart"></canvas>
+                    </div>
+                </div>
+            </div>
+
+            <div class="detailed-stats">
+                <h3 class="detailed-title">📋 Detailed Statistics</h3>
+                <div class="stats-table-container">
+                    <table class="stats-table" id="statsTable">
+                        <thead>
+                            <tr><th>Difficulty</th><th>Games</th><th>Best Moves</th><th>Best Time</th><th>Avg Moves</th><th>Avg Time</th></tr>
+                        </thead>
+                        <tbody id="statsTableBody"></tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div class="recent-games">
+                <h3 class="detailed-title">🕒 Recent Games</h3>
+                <div class="recent-list" id="recentGamesList"></div>
+            </div>
+
+            <div class="stats-footer">
+                <button class="btn btn-primary" onclick="refreshAllStats()">🔄 Refresh Statistics</button>
+            </div>
+        </main>
+    </div>
+
+    <div id="notificationToast" class="notification-toast"></div>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+    <script src="shared.js"></script>
+    <script src="stats.js"></script>
+</body>
+</html>

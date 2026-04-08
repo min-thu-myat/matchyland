@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>Matchyland · Memory Card Game</title>
+    <link rel="icon" href="Matchyland_Logo.png">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="app">
+        <!-- Navigation -->
+        <nav class="nav">
+            <div class="nav-container">
+                <a href="index.html" class="logo">
+                    <img src="Matchyland_Logo.png" alt="Matchyland Logo" class="logo-img">
+                    <span class="logo-text">matchy<span class="highlight">land</span></span>
+                </a>
+                <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Menu">☰</button>
+                <div class="nav-links" id="navLinks">
+                    <a href="index.html" class="nav-link active">Home</a>
+                    <a href="game.html" class="nav-link">Game</a>
+                    <a href="howto.html" class="nav-link">How to Play</a>
+                    <a href="scores.html" class="nav-link">Scores</a>
+                    <a href="stats.html" class="nav-link">Statistics</a>
+                    <a href="about.html" class="nav-link">About</a>
+                    <a href="settings.html" class="nav-link">Settings</a>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Home Content -->
+        <main class="main">
+            <div class="home">
+                <div class="home-content">
+                    <span class="badge">✨ Memory Game</span>
+                    <h1 class="home-title">
+                        matchy<span class="highlight">land</span>
+                    </h1>
+                    <p class="home-subtitle">
+                        Train your memory while having fun
+                    </p>
+                    
+                    <div class="feature-grid">
+                        <div class="feature-item">
+                            <span class="feature-emoji">🧠</span>
+                            <span class="feature-text">Improve focus</span>
+                        </div>
+                        <div class="feature-item">
+                            <span class="feature-emoji">🎯</span>
+                            <span class="feature-text">3 difficulties</span>
+                        </div>
+                        <div class="feature-item">
+                            <span class="feature-emoji">🏆</span>
+                            <span class="feature-text">Track scores</span>
+                        </div>
+                    </div>
+
+                    <a href="game.html" class="btn btn-primary btn-large">
+                        Start Playing
+                        <span class="btn-arrow">→</span>
+                    </a>
+
+                    <div class="preview-cards">
+                        <div class="preview-card">🐶</div>
+                        <div class="preview-card">🍫</div>
+                        <div class="preview-card">🎉</div>
+                        <div class="preview-card">🍂</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="testimonials-section">
+                <div class="testimonials-header">
+                    <span class="testimonials-icon">💬</span>
+                    <h3>Loved by Players Worldwide</h3>
+                </div>
+                <div class="testimonials-grid">
+                    <div class="testimonial-card">
+                        <div class="testimonial-stars">★★★★★</div>
+                        <p class="testimonial-quote">"Best memory game I've found! The stats dashboard keeps me motivated to improve every day."</p>
+                        <div class="testimonial-user">
+                            <span class="user-avatar">👩</span>
+                            <div>
+                                <div class="user-name">Sarah Johnson</div>
+                                <div class="user-title">Played 47 games</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-card">
+                        <div class="testimonial-stars">★★★★★</div>
+                        <p class="testimonial-quote">"Love the dark mode and music options. Makes practicing memory actually fun and relaxing."</p>
+                        <div class="testimonial-user">
+                            <span class="user-avatar">👨</span>
+                            <div>
+                                <div class="user-name">Michael Chen</div>
+                                <div class="user-title">Hard mode champion</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-card">
+                        <div class="testimonial-stars">★★★★★</div>
+                        <p class="testimonial-quote">"Accessibility features are amazing! The high contrast mode makes it so easy to see cards clearly."</p>
+                        <div class="testimonial-user">
+                            <span class="user-avatar">👴</span>
+                            <div>
+                                <div class="user-name">Robert Williams</div>
+                                <div class="user-title">Daily player</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="why-choose-us">
+                <div class="section-badge">
+                    <span class="badge-sparkle">✨</span>
+                    WHY PLAYERS LOVE US
+                    <span class="badge-sparkle">✨</span>
+                </div>
+                <h2 class="section-main-title">More Than Just<br>A Memory Game</h2>
+                <p class="section-subtitle">Join thousands of players improving their cognitive skills daily</p>
+                
+                <div class="choose-grid">
+                    <div class="choose-card">
+                        <div class="choose-icon">🎮</div>
+                        <h3>100% Free</h3>
+                        <p>No ads, no paywalls, no subscriptions. Pure memory training for everyone.</p>
+                        <div class="card-badge">POPULAR</div>
+                    </div>
+                    <div class="choose-card">
+                        <div class="choose-icon">📊</div>
+                        <h3>Track Progress</h3>
+                        <p>Detailed statistics with charts to see your improvement over time.</p>
+                        <div class="card-badge">NEW</div>
+                    </div>
+                    <div class="choose-card">
+                        <div class="choose-icon">🎨</div>
+                        <h3>Customizable</h3>
+                        <p>4 themes, 3 difficulties, music styles, and card sizes.</p>
+                    </div>
+                    <div class="choose-card">
+                        <div class="choose-icon">♿</div>
+                        <h3>Accessible</h3>
+                        <p>Dark mode, high contrast, colorblind filters & font size options.</p>
+                    </div>
+                    <div class="choose-card">
+                        <div class="choose-icon">🏆</div>
+                        <h3>Leaderboards</h3>
+                        <p>Compete globally and save your best scores forever.</p>
+                    </div>
+                    <div class="choose-card">
+                        <div class="choose-icon">🎵</div>
+                        <h3>Cozy Music</h3>
+                        <p>4 relaxing music styles to help you focus while playing.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="comparison-section">
+                <h3 class="comparison-title">Why Matchyland Stands Out</h3>
+                <div class="comparison-table">
+                    <div class="comparison-row header">
+                        <div class="comparison-feature">Feature</div>
+                        <div class="comparison-us">Matchyland</div>
+                        <div class="comparison-other">Other Games</div>
+                    </div>
+                    <div class="comparison-row">
+                        <div class="comparison-feature">🎮 Free to Play</div>
+                        <div class="comparison-us">✅ Yes</div>
+                        <div class="comparison-other">❌ Often Paid</div>
+                    </div>
+                    <div class="comparison-row">
+                        <div class="comparison-feature">📊 Statistics Dashboard</div>
+                        <div class="comparison-us">✅ Detailed Charts</div>
+                        <div class="comparison-other">❌ Basic Only</div>
+                    </div>
+                    <div class="comparison-row">
+                        <div class="comparison-feature">🎨 Card Themes</div>
+                        <div class="comparison-us">✅ 4+ Themes</div>
+                        <div class="comparison-other">❌ 1-2 Themes</div>
+                    </div>
+                    <div class="comparison-row">
+                        <div class="comparison-feature">🎵 Background Music</div>
+                        <div class="comparison-us">✅ 4 Styles</div>
+                        <div class="comparison-other">❌ None/Basic</div>
+                    </div>
+                    <div class="comparison-row">
+                        <div class="comparison-feature">♿ Accessibility</div>
+                        <div class="comparison-us">✅ Full Support</div>
+                        <div class="comparison-other">❌ Limited</div>
+                    </div>
+                    <div class="comparison-row">
+                        <div class="comparison-feature">🏆 Leaderboards</div>
+                        <div class="comparison-us">✅ Global</div>
+                        <div class="comparison-other">❌ None</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ===== SECTION 5: Call to Action Banner ===== -->
+            <div class="final-cta">
+                <div class="final-cta-content">
+                    <div class="final-cta-icon">🚀</div>
+                    <h3 class="final-cta-title">Ready to Challenge Your Memory?</h3>
+                    <p class="final-cta-text">Join Matchyland today and start your journey to better memory</p>
+                    <div class="final-cta-buttons">
+                        <a href="game.html" class="final-cta-primary">
+                            Start Playing Now
+                            <span class="arrow">→</span>
+                        </a>
+                        <a href="howto.html" class="final-cta-secondary">
+                            Learn the Basics
+                        </a>
+                    </div>
+                    <p class="final-cta-note">✨ No registration required. Just play! ✨</p>
+                </div>
+            </div>
+
+        </main>
+    </div>
+
+    <script src="shared.js"></script>
+</body>
+</html>

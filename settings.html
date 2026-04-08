@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>Matchyland · Settings</title>
+    <link rel="icon" href="Matchyland_Logo.png">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="app">
+        <!-- Navigation -->
+        <nav class="nav">
+            <div class="nav-container">
+                <a href="index.html" class="logo">
+                    <img src="Matchyland_Logo.png" alt="Matchyland Logo" class="logo-img">
+                    <span class="logo-text">matchy<span class="highlight">land</span></span>
+                </a>
+                <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Menu">☰</button>
+                <div class="nav-links" id="navLinks">
+                    <a href="index.html" class="nav-link">Home</a>
+                    <a href="game.html" class="nav-link">Game</a>
+                    <a href="howto.html" class="nav-link">How to Play</a>
+                    <a href="scores.html" class="nav-link">Scores</a>
+                    <a href="stats.html" class="nav-link">Statistics</a>
+                    <a href="about.html" class="nav-link">About</a>
+                    <a href="settings.html" class="nav-link active">Settings</a>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Settings Content -->
+        <main class="main">
+            <div class="page-header">
+                <h1 class="page-title">⚙️ Settings</h1>
+                <p class="page-subtitle">Customize your Matchyland experience</p>
+            </div>
+
+            <div class="settings-container">
+                <!-- Sound & Audio Section -->
+                <div class="settings-section">
+                    <h2 class="settings-section-title">
+                        <span class="section-icon">🔊</span>
+                        Sound & Audio
+                    </h2>
+                    <div class="settings-group">
+                        <div class="setting-item">
+                            <div class="setting-info">
+                                <label class="setting-label">Sound Effects</label>
+                                <p class="setting-desc">Card flip and match sounds</p>
+                            </div>
+                            <label class="toggle-switch">
+                                <input type="checkbox" id="soundToggle" checked>
+                                <span class="toggle-slider"></span>
+                            </label>
+                        </div>
+                        
+                        <div class="setting-item">
+                            <div class="setting-info">
+                                <label class="setting-label">Background Music</label>
+                                <p class="setting-desc">Cozy music while you play on the Game page 🎵</p>
+                            </div>
+                            <label class="toggle-switch">
+                                <input type="checkbox" id="musicToggle">
+                                <span class="toggle-slider"></span>
+                            </label>
+                        </div>
+                        
+                        <div class="setting-item">
+                            <div class="setting-info">
+                                <label class="setting-label">Music Style</label>
+                                <p class="setting-desc">Choose your favorite cozy vibe</p>
+                            </div>
+                            <select id="musicStyle" class="setting-select">
+                                <option value="lofi">🎧 Lo-Fi Chill - Relaxing beats</option>
+                                <option value="piano">🎹 Soft Piano - Gentle melody</option>
+                                <option value="chiptune">🎮 Cozy Chiptune - Retro warmth</option>
+                                <option value="ambient">🌙 Ambient Dream - Ethereal calm</option>
+                            </select>
+                        </div>
+                        
+                        <div class="setting-item">
+                            <div class="setting-info">
+                                <label class="setting-label">Volume</label>
+                                <p class="setting-desc">Adjust sound and music volume</p>
+                            </div>
+                            <input type="range" id="volumeSlider" min="0" max="100" value="70" class="volume-slider">
+                            <span id="volumeValue" class="volume-value">70%</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Gameplay Section -->
+                <div class="settings-section">
+                    <h2 class="settings-section-title">
+                        <span class="section-icon">🎮</span>
+                        Gameplay
+                    </h2>
+                    <div class="settings-group">
+                        <div class="setting-item">
+                            <div class="setting-info">
+                                <label class="setting-label">Card Flip Speed</label>
+                                <p class="setting-desc">How fast cards flip</p>
+                            </div>
+                            <select id="flipSpeed" class="setting-select">
+                                <option value="fast">Fast (0.3s)</option>
+                                <option value="normal" selected>Normal (0.5s)</option>
+                                <option value="slow">Slow (0.8s)</option>
+                            </select>
+                        </div>
+                        
+                        <div class="setting-item">
+                            <div class="setting-info">
+                                <label class="setting-label">Card Theme</label>
+                                <p class="setting-desc">Choose card designs</p>
+                            </div>
+                            <div class="theme-selector">
+                                <button class="theme-btn active" data-theme="animals">
+                                    <span class="theme-emoji">🐶</span>
+                                    <span>Animals</span>
+                                </button>
+                                <button class="theme-btn" data-theme="food">
+                                    <span class="theme-emoji">🍕</span>
+                                    <span>Food</span>
+                                </button>
+                                <button class="theme-btn" data-theme="emojis">
+                                    <span class="theme-emoji">😊</span>
+                                    <span>Emojis</span>
+                                </button>
+                                <button class="theme-btn" data-theme="nature">
+                                    <span class="theme-emoji">🌿</span>
+                                    <span>Nature</span>
+                                </button>
+                            </div>
+                        </div>
+                        
+                        <div class="setting-item">
+                            <div class="setting-info">
+                                <label class="setting-label">Auto-match Delay</label>
+                                <p class="setting-desc">Time before mismatched cards flip back</p>
+                            </div>
+                            <select id="matchDelay" class="setting-select">
+                                <option value="500">0.5 seconds</option>
+                                <option value="750" selected>0.75 seconds</option>
+                                <option value="1000">1.0 second</option>
+                                <option value="1500">1.5 seconds</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Visual Section -->
+                <div class="settings-section">
+                    <h2 class="settings-section-title">
+                        <span class="section-icon">🎨</span>
+                        Visual
+                    </h2>
+                    <div class="settings-group">
+                        <div class="setting-item">
+                            <div class="setting-info">
+                                <label class="setting-label">Dark Mode</label>
+                                <p class="setting-desc">Switch to dark theme</p>
+                            </div>
+                            <label class="toggle-switch">
+                                <input type="checkbox" id="darkModeToggle">
+                                <span class="toggle-slider"></span>
+                            </label>
+                        </div>
+                        
+                        <div class="setting-item">
+                            <div class="setting-info">
+                                <label class="setting-label">High Contrast Mode</label>
+                                <p class="setting-desc">Better visibility</p>
+                            </div>
+                            <label class="toggle-switch">
+                                <input type="checkbox" id="highContrastToggle">
+                                <span class="toggle-slider"></span>
+                            </label>
+                        </div>
+                        
+                        <div class="setting-item">
+                            <div class="setting-info">
+                                <label class="setting-label">Reduce Motion</label>
+                                <p class="setting-desc">Disable animations</p>
+                            </div>
+                            <label class="toggle-switch">
+                                <input type="checkbox" id="reduceMotionToggle">
+                                <span class="toggle-slider"></span>
+                            </label>
+                        </div>
+                        
+                        <div class="setting-item">
+                            <div class="setting-info">
+                                <label class="setting-label">Card Size</label>
+                                <p class="setting-desc">Adjust card dimensions</p>
+                            </div>
+                            <div class="size-buttons">
+                                <button class="size-btn" data-size="small">Small</button>
+                                <button class="size-btn active" data-size="medium">Medium</button>
+                                <button class="size-btn" data-size="large">Large</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Accessibility Section -->
+                <div class="settings-section">
+                    <h2 class="settings-section-title">
+                        <span class="section-icon">♿</span>
+                        Accessibility
+                    </h2>
+                    <div class="settings-group">
+                        <div class="setting-item">
+                            <div class="setting-info">
+                                <label class="setting-label">Keyboard Navigation</label>
+                                <p class="setting-desc">Use arrow keys and Enter to play</p>
+                            </div>
+                            <label class="toggle-switch">
+                                <input type="checkbox" id="keyboardNavToggle" checked>
+                                <span class="toggle-slider"></span>
+                            </label>
+                        </div>
+                        
+                        <div class="setting-item">
+                            <div class="setting-info">
+                                <label class="setting-label">Colorblind Mode</label>
+                                <p class="setting-desc">Choose your color vision type</p>
+                            </div>
+                            <select id="colorblindMode" class="setting-select">
+                                <option value="none">None</option>
+                                <option value="protanopia">Protanopia (Red-blind)</option>
+                                <option value="deuteranopia">Deuteranopia (Green-blind)</option>
+                                <option value="tritanopia">Tritanopia (Blue-blind)</option>
+                            </select>
+                        </div>
+                        
+                        <div class="setting-item">
+                            <div class="setting-info">
+                                <label class="setting-label">🔤 Font Size</label>
+                                <p class="setting-desc">Adjust text size throughout the game</p>
+                            </div>
+                            <div class="size-buttons">
+                                <button class="font-size-btn" data-font="small">Small</button>
+                                <button class="font-size-btn active" data-font="medium">Medium</button>
+                                <button class="font-size-btn" data-font="large">Large</button>
+                                <button class="font-size-btn" data-font="xlarge">X-Large</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Data Management Section -->
+                <div class="settings-section">
+                    <h2 class="settings-section-title">
+                        <span class="section-icon">💾</span>
+                        Data Management
+                    </h2>
+                    <div class="settings-group">
+                        <div class="setting-item">
+                            <div class="setting-info">
+                                <label class="setting-label">Auto-save Scores</label>
+                                <p class="setting-desc">Automatically save your scores</p>
+                            </div>
+                            <label class="toggle-switch">
+                                <input type="checkbox" id="autoSaveToggle" checked>
+                                <span class="toggle-slider"></span>
+                            </label>
+                        </div>
+                        
+                        <div class="setting-item">
+                            <div class="setting-info">
+                                <label class="setting-label">Export My Data</label>
+                                <p class="setting-desc">Download all your scores and settings</p>
+                            </div>
+                            <button class="btn-data" id="exportDataBtn">📥 Export</button>
+                        </div>
+                        
+                        <div class="setting-item">
+                            <div class="setting-info">
+                                <label class="setting-label">Import Data</label>
+                                <p class="setting-desc">Restore from backup file</p>
+                            </div>
+                            <button class="btn-data" id="importDataBtn">📤 Import</button>
+                            <input type="file" id="importFile" accept=".json" style="display: none;">
+                        </div>
+                        
+                        <div class="setting-item warning-item">
+                            <div class="setting-info">
+                                <label class="setting-label">Clear All Data</label>
+                                <p class="setting-desc warning-text">⚠️ This cannot be undone</p>
+                            </div>
+                            <button class="btn-danger" id="clearDataBtn">Clear All</button>
+                        </div>
+                        
+                        <div class="setting-item">
+                            <div class="setting-info">
+                                <label class="setting-label">Reset All Settings</label>
+                                <p class="setting-desc">Restore default settings</p>
+                            </div>
+                            <button class="btn-secondary" id="resetSettingsBtn">Reset to Defaults</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- About Settings -->
+                <div class="settings-section">
+                    <h2 class="settings-section-title">
+                        <span class="section-icon">ℹ️</span>
+                        About
+                    </h2>
+                    <div class="settings-group">
+                        <div class="info-item">
+                            <p><strong>Version:</strong> 2.0.0</p>
+                            <p><strong>Last Updated:</strong> March 2026</p>
+                            <p><strong>Settings Location:</strong> Saved in your browser</p>
+                            <p><strong>Music Note:</strong> Background music only plays on the Game page</p>
+                            <p><strong>Storage Used:</strong> <span id="storageUsed">Calculating...</span></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- Notification Toast -->
+    <div id="notificationToast" class="notification-toast"></div>
+
+    <script src="settings.js"></script>
+    <script src="shared.js"></script>
+    
+    <script>
+        // Calculate and display storage usage
+        function updateStorageInfo() {
+            let total = 0;
+            for (let i = 0; i < localStorage.length; i++) {
+                const key = localStorage.key(i);
+                const value = localStorage.getItem(key);
+                total += (key.length + (value ? value.length : 0)) * 2;
+            }
+            
+            const storageSpan = document.getElementById('storageUsed');
+            if (storageSpan) {
+                if (total > 1024) {
+                    storageSpan.textContent = (total / 1024).toFixed(1) + ' KB';
+                } else {
+                    storageSpan.textContent = total + ' bytes';
+                }
+            }
+        }
+        
+        document.addEventListener('DOMContentLoaded', updateStorageInfo);
+        window.addEventListener('storage', updateStorageInfo);
+    </script>
+</body>
+</html>
