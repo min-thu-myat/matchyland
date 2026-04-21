@@ -2947,3 +2947,114 @@ body.dark-mode .comparison-row.header {
         grid-template-columns: 1fr;
     }
 }
+
+.simple-footer {
+    text-align: center;
+    padding: 40px 32px;
+    margin-top: 48px;
+    margin-bottom: 32px;
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 48px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+    max-width: 1150px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+}
+
+.footer-links-simple {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+    margin-bottom: 24px;
+}
+
+.footer-links-simple a {
+    color: #4a5568;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 1rem;
+    transition: color 0.2s;
+}
+
+.footer-links-simple a:hover {
+    color: #FF6B6B;
+}
+
+.footer-copyright-simple {
+    color: #718096;
+    font-size: 0.9rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.footer-heart-simple {
+    color: #FF6B6B;
+}
+
+/* Dark Mode */
+body.dark-mode .simple-footer {
+    background: rgba(30, 30, 46, 0.95);
+}
+
+body.dark-mode .footer-links-simple a {
+    color: #a0aec0;
+}
+
+body.dark-mode .footer-links-simple a:hover {
+    color: #FF6B6B;
+}
+
+/* High Contrast */
+body.high-contrast .simple-footer {
+    background: black;
+    border: 2px solid white;
+}
+
+body.high-contrast .footer-links-simple a {
+    color: white;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    .simple-footer {
+        padding: 28px 24px;
+        border-radius: 32px;
+        margin-top: 32px;
+        margin-bottom: 24px;
+        max-width: 100%;
+    }
+    
+    .footer-links-simple {
+        gap: 24px;
+    }
+    
+    .footer-links-simple a {
+        font-size: 0.85rem;
+    }
+    
+    .footer-copyright-simple {
+        font-size: 0.75rem;
+        gap: 6px;
+    }
+}
+
+@media (max-width: 480px) {
+    .simple-footer {
+        padding: 24px 20px;
+    }
+    
+    .footer-links-simple {
+        gap: 16px;
+    }
+    
+    .footer-links-simple a {
+        font-size: 0.75rem;
+    }
+}
