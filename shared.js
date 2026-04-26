@@ -1,5 +1,4 @@
 (function() {
-    // Apply theme immediately before page renders to prevent flash
     const savedSettings = localStorage.getItem('matchylandSettings');
     if (savedSettings) {
         const settings = JSON.parse(savedSettings);
