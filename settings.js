@@ -1,5 +1,3 @@
-// Settings Manager - Complete Settings Functionality
-// Music only plays on the Game page
 class SettingsManager {
     constructor() {
         this.defaults = {
