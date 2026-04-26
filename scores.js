@@ -1,5 +1,3 @@
-// ===== SCORES.JS - COMPLETE REPLACEMENT FILE =====
-
 let currentDifficulty = 'easy';
 
 function getScores() {
@@ -69,14 +67,12 @@ function clearAllScores() {
     }
 }
 
-// Helper function to escape HTML
 function escapeHtml(text) {
     const div = document.createElement('div');
     div.textContent = text;
     return div.innerHTML;
 }
 
-// Add showNotification function if needed
 function showNotification(message, type = 'info') {
     let toast = document.getElementById('notificationToast');
     
